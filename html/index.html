@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>FestEventos - Cálculo</title>
+</head>
+<body>
+    
+    <h1>Cálculo </h1>
+    <p>O site calcula automaticamente o subtotal com base na quantidade<br>  e exibe o resumo pronto para ser enviado via WhatsApp.</p>
+ 
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="col-preco">Preço Un.</th>
+                    <th class="col-qtd">Qtd</th>
+                    <th class="subTotal">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kit Mesa + 4 Cadeiras</td>
+                    <td class="col-preco">R$ 25,00</td>
+                    <td class="col-qtd">
+                        <input type="number" id="qtdKit" min="0" value="0" oninput="calcularTotal()">
+                    </td>
+                    <td class="col-subtotal">R$ <span id="subtotalKit">0,00</span></td>
+                </tr>
+
+                <tr>
+                    <td>Cadeira Avulsa</td>
+                    <td class="col-preco">R$ 4,00</td>
+                    <td class="col-qtd">
+                        <input type="number" id="qtdCadeira" min="0" value="0" oninput="calcularTotal()">
+                    </td>
+                    <td class="col-subtotal">R$ <span id="subtotalCadeira">0,00</span></td>
+                </tr>
+
+                <tr>
+                    <td>Toalha de Mesa</td>
+                    <td class="col-preco">R$ 8,00</td>
+                    <td class="col-qtd">
+                        <input type="number" id="qtdToalha" min="0" value="0" oninput="calcularTotal()">
+                    </td>
+                    <td class="col-subtotal">R$ <span id="subtotalToalha">0,00</span></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right; font-weight: bold;">Total Geral:</td>
+                    <td class="col-subtotal" style="font-weight: bold;">R$ <span id="valorTotal">0,00</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+<!-- Botão do WhatsApp -->
+    <div style="margin-top: 20px;">
+        <label for="telefoneCliente">Número do WhatsApp (com DDD):</label><br>
+        <input type="text" id="telefoneCliente" placeholder="Ex: 21999999999" style="padding: 5px; width: 250px; margin-top: 5px; margin-bottom: 10px;"><br>
+        
+        <button onclick="enviarWhatsApp()" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            Enviar Pedido via WhatsApp
+        </button>
+    </div>
+    <!-- Importação correta do arquivo JavaScript -->
+    <script src="/js/co.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #afcdfa;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background:#1a74db;
+      color:#eee;
+      font-weight: 600;
+    }
+
+    /* Alinhamento numérico à direita */
+    .col-preco, .col-qtd, .col-subtotal {
+      text-align: right;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      padding: 6px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    tfoot tr {
+      background-color: #f1f1f1;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    tfoot td {
+      border-top: 2px solid #ddd;
+    }
+ 
